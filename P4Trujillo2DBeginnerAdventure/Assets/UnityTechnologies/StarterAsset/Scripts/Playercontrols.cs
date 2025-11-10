@@ -4,17 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class PlayerControllerTutorialUpdates : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public InputAction LeftAction;
+    public InputAction MoveAction;
     void Start()
     {
-
-
+        //QualitySettings.vSyncCount = 0;
+        //Application.targetFrameRate = 10;
+        LeftAction.Enable();
+        MoveAction.Enable();
     }
 
 
-    // Update is called once per frame
     void Update()
     {
         float horizontal = 0.0f;
@@ -40,11 +42,16 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         }
         Debug.Log(vertical);
 
-
-        Vector2 position = transform.position;
+        Vector2 move = MoveAction.ReadValue<Vector2>();
+        Debug.Log(move);
+         Vector2 position = (Vector2)transform.position + move * 3.0f * Time.deltaTime;
         position.x = position.x + 0.1f * horizontal;
         position.y = position.y + 0.1f * vertical;
         transform.position = position;
-    }
+        {
+            
 
+
+        }
+    }
 }
