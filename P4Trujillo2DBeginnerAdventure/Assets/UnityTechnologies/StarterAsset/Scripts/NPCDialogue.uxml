@@ -1,5 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Backgrounds" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UnityTechnologies/StarterAsset/Art/Ruby/UI/UIDialogueBox.png?fileID=21300000&amp;guid=c4592e9bd029fcc45843314f2192f59e&amp;type=3#UIDialogueBox&quot;); width: 100%; height: 100%;">
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 349px; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 25px; padding-right: 25px; padding-bottom: 25px; padding-left: 25px; white-space: normal;" />
-    </ui:VisualElement>
+    <ui:Template name="GameUI" src="project://database/Assets/UnityTechnologies/StarterAsset/Scripts/GameUI.uxml?fileID=9197481963319205126&amp;guid=e619c730a40d90a48af3ee0a6c42c01e&amp;type=3#GameUI" />
+    <ui:Instance template="GameUI" name="GameUI">
+        <ui:VisualElement name="Backgrounds" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UnityTechnologies/StarterAsset/Art/Ruby/UI/UIDialogueBox.png?fileID=21300000&amp;guid=c4592e9bd029fcc45843314f2192f59e&amp;type=3#UIDialogueBox&quot;); width: 100%; height: 100%; position: absolute; top: 70%; left: 10%; right: 10%; bottom: 0%;">
+            <ui:Label tabindex="-1" text="Hey! Help me fix all those broken robots!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 349px; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 25px; padding-right: 25px; padding-bottom: 25px; padding-left: 25px; white-space: normal; font-size: 25px; -unity-font-style: bold; -unity-font: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=52e079502833d824cbc9fd98c763cf67&amp;type=3#NotInter-Regular&quot;); color: rgb(255, 255, 255); position: absolute; top: 3px; left: 8px; -unity-text-align: upper-left;" />
+        </ui:VisualElement>
+    </ui:Instance>
 </ui:UXML>
